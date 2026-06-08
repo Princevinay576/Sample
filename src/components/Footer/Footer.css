@@ -1,0 +1,120 @@
+.site-footer {
+  width: min(1240px, 94%);
+  margin: clamp(60px, 8vw, 110px) auto 0;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 28px;
+  box-shadow: var(--shadow-soft);
+}
+
+.site-footer h3 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.site-footer p {
+  margin-top: 0;
+}
+
+.footer-news label {
+  display: block;
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.footer-news input {
+  width: 100%;
+  border: 1px solid #cbbdac;
+  border-radius: 10px;
+  padding: 11px 12px;
+  margin-bottom: 12px;
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footer-news input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(192, 72, 49, 0.15);
+  outline: none;
+}
+
+.sub {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 11px;
+  background: linear-gradient(120deg, var(--accent), var(--accent-dark));
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.sub:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.sub:disabled {
+  opacity: 0.7;
+  transform: none;
+  cursor: not-allowed;
+}
+
+.sub-error,
+.sub-success {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.82rem;
+}
+
+.sub-error {
+  color: #b22121;
+}
+
+.sub-success {
+  color: #1d7d3a;
+}
+
+.footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+  color: #4f4842;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer-links li:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 920px) {
+  .site-footer {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-footer {
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+
+  .site-footer h3 {
+    font-size: 1.06rem;
+  }
+}

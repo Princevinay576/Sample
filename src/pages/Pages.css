@@ -1,0 +1,271 @@
+.page-wrap {
+  width: min(1240px, 94%);
+  margin: clamp(48px, 8vw, 96px) auto;
+}
+
+.page-card {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  padding: clamp(22px, 4vw, 42px);
+  box-shadow: var(--shadow-soft);
+}
+
+.page-card h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+}
+
+.page-card p {
+  max-width: 62ch;
+}
+
+.contact-grid,
+.auth-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.contact-grid > div,
+.auth-grid > div {
+  display: grid;
+  gap: 6px;
+}
+
+.contact-grid input,
+.auth-grid input,
+.contact-grid textarea,
+.auth-grid select {
+  width: 100%;
+  border: 1px solid #ccbca9;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fff;
+}
+
+.contact-grid textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-grid button,
+.auth-grid button,
+.inline-btn {
+  width: fit-content;
+  border: none;
+  border-radius: 999px;
+  padding: 11px 18px;
+  background: linear-gradient(120deg, var(--accent), var(--accent-dark));
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-grid button:hover,
+.auth-grid button:hover,
+.inline-btn:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.link-btn {
+  text-decoration: none;
+  display: inline-flex;
+}
+
+.field-error {
+  color: #b22121;
+  font-size: 0.82rem;
+}
+
+.field-success {
+  margin: 0;
+  color: #1d7d3a;
+  font-weight: 700;
+}
+
+.form-card {
+  max-width: 520px;
+}
+
+.empty-state {
+  display: grid;
+  gap: 12px;
+}
+
+.cart-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 88px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  border: 1px solid #e7dccc;
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.cart-item img {
+  width: 88px;
+  height: 88px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.cart-item-content p {
+  margin: 0;
+}
+
+.cart-item-name {
+  font-weight: 700;
+  color: #261f19;
+}
+
+.cart-actions {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cart-actions button {
+  border: 1px solid #ccbba6;
+  border-radius: 8px;
+  background: #fff;
+  min-width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cart-actions button:hover {
+  background-color: #f7efe5;
+}
+
+.remove-btn {
+  padding: 0 10px;
+}
+
+.cart-line-total {
+  font-weight: 700;
+  color: #2f2923;
+}
+
+.cart-summary {
+  margin-top: 20px;
+  border-top: 1px solid #e8dece;
+  padding-top: 14px;
+}
+
+.cart-summary p {
+  margin: 0;
+}
+
+.cart-summary-buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ghost-btn {
+  border: 1px solid #cab8a5;
+  border-radius: 999px;
+  padding: 11px 18px;
+  background: #fff;
+  color: #3a3027;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-form {
+  max-width: 760px;
+  margin-top: 18px;
+}
+
+.admin-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.admin-email {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #3d3127;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.admin-list {
+  margin-top: 20px;
+  display: grid;
+  gap: 12px;
+}
+
+.admin-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #e7dccc;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.admin-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.admin-item p {
+  margin: 0;
+}
+
+.admin-item-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 680px) {
+  .page-card {
+    border-radius: 16px;
+    padding: 18px 14px;
+  }
+
+  .contact-grid button,
+  .auth-grid button,
+  .inline-btn,
+  .ghost-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cart-item {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-line-total {
+    justify-self: start;
+  }
+
+  .admin-item {
+    grid-template-columns: 1fr;
+  }
+}

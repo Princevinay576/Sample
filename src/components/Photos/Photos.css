@@ -1,0 +1,84 @@
+.photos {
+  width: min(1240px, 94%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.photo-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.16);
+  transition: transform 0.3s ease;
+}
+
+.photo-card img {
+  width: 100%;
+  height: clamp(260px, 44vw, 520px);
+  object-fit: cover;
+  transform: scale(1.03);
+  transition: transform 0.7s ease;
+}
+
+.photo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 15, 11, 0.05), rgba(20, 15, 11, 0.55));
+  z-index: 1;
+}
+
+.photo-btn {
+  position: absolute;
+  z-index: 2;
+  left: 20px;
+  bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.17);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 999px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background-color 0.25s ease;
+}
+
+.photo-card:hover img {
+  transform: scale(1.09);
+}
+
+.photo-card:hover {
+  transform: translateY(-4px);
+}
+
+.photo-btn:hover {
+  background-color: rgba(255, 255, 255, 0.28);
+}
+
+@media (max-width: 900px) {
+  .photos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .photos {
+    gap: 14px;
+  }
+
+  .photo-card {
+    border-radius: 18px;
+  }
+
+  .photo-btn {
+    left: 12px;
+    bottom: 12px;
+    font-size: 0.72rem;
+    padding: 10px 14px;
+  }
+}

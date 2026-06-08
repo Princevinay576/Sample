@@ -1,0 +1,24 @@
+.announcement-bar {
+  background: linear-gradient(120deg, #2a2320, #4c4039);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  text-align: center;
+  padding: 10px 16px;
+}
+
+.announcement-bar p {
+  margin: 0;
+  color: #f9f3eb;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 560px) {
+  .announcement-bar {
+    padding: 8px 10px;
+  }
+
+  .announcement-bar p {
+    font-size: 0.78rem;
+    letter-spacing: 0.02em;
+  }
+}
