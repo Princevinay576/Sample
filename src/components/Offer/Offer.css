@@ -29,6 +29,7 @@
   display: flex;
   gap: 22px;
   flex: 1;
+  overflow: hidden;
 }
 
 .offer-card {
@@ -148,6 +149,10 @@
     flex-basis: calc((100% - 14px) / 2);
   }
 
+  .offer-card:nth-of-type(n + 3) {
+    display: none;
+  }
+
   .offer-nav-icon {
     width: 36px;
     height: 36px;
@@ -161,6 +166,10 @@
 
   .offer-card {
     flex-basis: 100%;
+  }
+
+  .offer-card:nth-of-type(n + 2) {
+    display: none;
   }
 
   .offer-body {

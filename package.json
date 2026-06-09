@@ -1,5 +1,5 @@
 {
-  "homepage":"https://Princevinay576.github.io/sample",
+  "homepage": "https://Princevinay576.github.io/Sample",
   "name": "painting",
   "private": true,
   "version": "0.0.0",
@@ -14,7 +14,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy":"gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
